@@ -269,6 +269,8 @@ function Lobby() {
   useEffect(() => {
     // TODO 
     // should we add a reconnect feature using the playerId now that we have it?
+    // Reconnect feature is working! but only on implemented on this page so far.
+
     // do something ui wise with isHost?
 
     socket.on('connect', () => {

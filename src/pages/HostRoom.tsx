@@ -434,7 +434,6 @@ function HostRoom() {
   const handleCreateRoom = () => {
     if (!nickname.trim() || !roomName.trim()) return;
     socket.emit('createRoom', { roomName, nickname}, (response) => {
-      // TODO if we get bad code back, give error
       if (response.status === 'success') {
         sessionStorage.setItem('playerId', response.data.playerId);
         navigate(`/lobby/${response.data.roomCode}`, {
